@@ -22,6 +22,7 @@ text-decoration: none;
     justify-content: center;    /* Vertical center */
     align-items: center;        /* Horizontal center */
     text-align: center;
+    padding: 40px 20px;
 }
 
 .hero h1 {
@@ -155,4 +156,10 @@ text-decoration: none;
     margin: 10px auto;
     font-size: 18px;
     line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .hero {
+    min-height: 40vh;
+    padding: 30px 15px;
+  }
 }
