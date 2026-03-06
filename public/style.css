@@ -16,7 +16,7 @@ text-decoration: none;
 }
 
 .hero {
-    height: 50vh;              
+                
     display: flex;
     flex-direction: column;
     justify-content: center;    /* Vertical center */
@@ -163,3 +163,4 @@ text-decoration: none;
     padding: 30px 15px;
   }
 }
+
