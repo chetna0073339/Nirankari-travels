@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<style>
+body{
+font-family: Arial;
+background:#f4f4f4;
+text-align:center;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+width:80%;
+background:white;
+}
+
+th,td{
+padding:10px;
+border:1px solid black;
+}
+
+th{
+background:#333;
+color:white;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Admin Dashboard</h1>
+<h3>All Bookings</h3>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Phone</th>
+<th>Car</th>
+<th>Date</th>
+</tr>
+</thead>
+
+<tbody id="bookings"></tbody>
+
+</table>
+
+<script>
+
+fetch("http://localhost:5000/admin/bookings")
+.then(res=>res.json())
+.then(data=>{
+
+const table=document.getElementById("bookings");
+
+data.forEach(b=>{
+
+table.innerHTML+=`
+<tr>
+<td>${b.name}</td>
+<td>${b.phone}</td>
+<td>${b.car}</td>
+<td>${b.date}</td>
+</tr>
+`;
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
