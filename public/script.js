@@ -5,7 +5,8 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
     const phone = document.getElementById("phone").value;
     const service = document.getElementById("service").value;
 
-    fetch("http://localhost:5000/book", {
+    
+    fetch("http://nirankari-travels.onrender.com/book", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -13,9 +14,22 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
         body: JSON.stringify({
             name: name,
             phone: phone,
-            service: service
+            service: service 
         })
     })
+    fetch("https://nirankari-travels.onrender.com/api/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            username:username,
+            password:password
+        })
+    })
+
+
+
     .then(res => res.json())
     .then(data => {
         alert("Booking Successful! We will contact you.");
