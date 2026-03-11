@@ -17,7 +17,7 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
             service: service 
         })
     })
-    fetch("https://nirankari-travels.onrender.com/api/login", {
+    fetch("https://nirankari-travels.onrender.com/admin-login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -38,4 +38,5 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
         console.error(err);
     });
 });
+
 
