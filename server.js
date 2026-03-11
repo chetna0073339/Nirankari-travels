@@ -3,12 +3,10 @@ const cors = required("cors");
 const path = require("path");
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
-app.use(cors({
-  origin:
-  "https://nirankari-travels.vercel.app"
-}));
+
 
 // Booking API
 app.post("/book", (req, res) => {
@@ -69,3 +67,6 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
+
+
+   
