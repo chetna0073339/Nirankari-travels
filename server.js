@@ -3,8 +3,10 @@ const cors = required("cors");
 const path = require("path");
 const app = express();
 
-app.use(cors());
-app.options("*",cors());
+app.use(cors({
+  origin: "*"
+}));
+
 app.use(express.json());
 app.use(express.static("public"));
 
