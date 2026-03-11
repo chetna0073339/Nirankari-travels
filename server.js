@@ -4,6 +4,10 @@ const app = express();
 
 app.use(express.json());
 app.use(express.static("public"));
+app.use(cors({
+  origin:
+  "https://nirankari-travels.vercel.app"
+}));
 
 // Booking API
 app.post("/book", (req, res) => {
@@ -32,11 +36,15 @@ app.delete("/admin/bookings/:index",(req, res)=> {
 
 app.post("/admin-login", (req, res) => {
 
-  const { username, password } = req.body;
+const { username, password} =req.body;
+  console.log = ( "Username received:", username);
+  console.log = ("Password received:",password);
 
-  if (username === "admin" && password === "12345") {
-    res.json({ success: true });
+  if (username === "admin" && password === "Admin@789") {
+    
+  res.json({ success: true });
   } else {
+    
     res.json({ success: false });
   }
 
