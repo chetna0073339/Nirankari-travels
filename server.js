@@ -29,14 +29,19 @@ app.post("/book", (req, res) => {
     res.send("Booking saved");
 });
 
-app.delete("/admin/bookings/:index",(req, res)=> {
+// GET ALL B0OKING
+app.get("/api/bookings",(req, res) => {
+  res.json(bookings);
+});
+
+app.delete("/api/bookings/:index",(req, res)=> {
   
   const  index = req.params.index;
   bookings.splice(index,1);
   res.json({message:"Booking deleted"});
 });
 
-app.post("/admin-login", (req, res) => {
+app.post("/api/admin-login", (req, res) => {
 
 const { username, password} =req.body;
   console.log = ( "Username received:", username);
@@ -54,7 +59,7 @@ const { username, password} =req.body;
 
 
 // Admin API to get all bookings
-app.get("/admin/bookings", (req, res) => {
+app.get("/api/bookings", (req, res) => {
 
     res.json(bookings);
 
@@ -69,5 +74,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
 
