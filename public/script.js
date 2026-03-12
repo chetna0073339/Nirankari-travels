@@ -38,5 +38,3 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
         console.error(err);
     });
 });
-
-
