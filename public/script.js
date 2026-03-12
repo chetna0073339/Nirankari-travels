@@ -4,6 +4,7 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
     const service = document.getElementById("service").value;
+    const date = document.getElementaryByID("date").value;
 
     
     fetch("https://nirankari-travels.onrender.com/book", {
@@ -14,10 +15,11 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
         body: JSON.stringify({
             name: name,
             phone: phone,
-            service: service 
+            service: service ,
+            date: date
         })
     })
-    fetch("https://nirankari-travels.onrender.com/admin-login", {
+    fetch("https://nirankari-travels.onrender.com/api/admin-login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -38,3 +40,5 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
         console.error(err);
     });
 });
+
+
