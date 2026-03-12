@@ -15,9 +15,14 @@ margin: 10px;
 text-decoration: none;
 }
 
-.hero {
-    height: 50vh;              
+.hero{
+background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("https://images.unsplash.com/photo-1493238792000-8113da705763");
+background-size: cover;
+background-position: center;
+ height: 50vh;              
     display: flex;
+
     flex-direction: column;
     justify-content: center;    /* Vertical center */
     align-items: center;        /* Horizontal center */
@@ -26,11 +31,19 @@ text-decoration: none;
 }
 
 .hero h1 {
-    margin-bottom: 10px;
+ margin-bottom: 10px;
+    color: white;
+    
+}
+.hero h2 {
+    color:#f4f4f4;
+    text-shadow:2px 2px 5px black;
+
 }
 
 .hero p {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    color:#f4f4f4;
 }
 
 .hero .btn {
@@ -91,8 +104,15 @@ footer {
      height: auto;
     text-align: center;
 }
+.contact-title{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 60px;
+    
+}
 
-services-container {
+.services-container {
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
@@ -115,10 +135,15 @@ height: 180px;
 border-radius: 10px;
 }
 
-.service-box h3 {
-color: #ff6b00;
+.service-text{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0,0.5);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
 }
-
 .service-box p {
 font-size: 14px;
 }
@@ -129,7 +154,7 @@ font-family: Arial;
 }
 
 header {
-background: #ff6b00;
+
 color: white;
 padding: 15px;
 text-align: center;
@@ -141,14 +166,16 @@ margin: 10px;
 text-decoration: none;
 }
 .about {
-    padding: 50px 20px;
+    padding: 30px 20px;
     text-align: center;
     background-color: #f4f4f4;
+    
 }
 
 .about h2 {
-    font-size: 32px;
+    font-size: 60px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .about p {
@@ -162,4 +189,10 @@ text-decoration: none;
     min-height: 40vh;
     padding: 30px 15px;
   }
+}
+.contact{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    line-height: 28px;
 }
